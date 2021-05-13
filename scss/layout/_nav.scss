@@ -1,0 +1,58 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the nav of the site/application.
+// -----------------------------------------------------------------------------
+
+// Top-bar Styles
+
+.top-bar{
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 18px;
+    flex-wrap: wrap;
+
+    @include respond-to('medium') {
+        justify-content: space-between;
+    }
+}
+
+
+nav li {
+    list-style-type: none;
+}
+
+
+nav li a{
+    color: white;
+    text-decoration: none;
+    line-height: 5rem;
+
+    @include respond-to('medium') {
+        color: black;
+        line-height: 5rem;
+        font-size: 1.7rem;
+    }
+
+    &:hover {
+        color: $white;
+        text-decoration: none;
+    }
+}
+
+nav .active-page a{
+    font-weight: bold;
+    color: $brand-color;
+}
+
+.show nav {
+    display: block;
+}
+
+
+
+
+
+
+
