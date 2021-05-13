@@ -1,0 +1,78 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the hamburger component.
+// -----------------------------------------------------------------------------
+
+// Hamburger Styles
+
+.hamburger {
+  width: 56px;
+  font-size: 62px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  z-index: 10000;
+
+  @include respond-to('medium') {
+    display: none;
+}
+}
+
+.bar {
+  height: 4px;
+  background: white;
+  color: red;
+  transition: all 0.4s ease;
+  border-radius: 25px;
+  margin-bottom: 6px;
+  transform-origin: left center;
+}
+
+
+
+.bar-1 {
+  width: 40px;
+  transition: transform 0.4s ease;
+
+}
+
+.hamburger:hover > .bar-1 {
+  transform: scaleX(0.9);
+}
+
+.bar-2 {
+  width: 60%;
+}
+
+.hamburger:hover > .bar-2 {
+  transform: scaleX(1.08);
+}
+
+.bar-3 {
+  width: 40px;
+}
+
+.hamburger:hover > .bar-3 {
+  transform: scaleX(0.9);
+}
+
+.show .hamburger {
+
+  & > .bar-1 {
+    transform: none;
+    transform: rotate(45deg);
+  }
+
+  & > .bar-2 {
+    opacity: 0;
+  }
+
+  & > .bar-3 {
+    transform: none;
+    transform: rotate(-45deg) translate(-6px, 5px);
+  }
+
+
+}
+
+
